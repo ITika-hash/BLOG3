@@ -29,14 +29,8 @@
             <ul class="navbar-nav">
                 <div class="dropdown">
                 <li class="nav-item" id="dropbtn">
-                    <a id="home" class="nav-link active" aria-current="page" href="#">Home</a>
-                    <div class="dropdown-content">
-                        <a href="#">Link1</a>
-                        <a href="#">Link2</a>
-                        <a href="#">Link3</a>
-                        <a href="#">Link4</a>
-                        <a href="#">Link5</a>
-                    </div>
+                    <a id="home" class="nav-link active" aria-current="page" href="{% url 'frontpage' %}">Home</a>
+
                 </li>
 
                 </div>
@@ -45,25 +39,24 @@
                 <li class="nav-item" id="dropbtn2">
                     <a class="nav-link" href="#">Posts</a>
                     <div class="dropdown-content">
-                        <a href="#">Post1</a>
-                        <a href="#">Post2</a>
-                        <a href="#">Post3</a>
-
+                        {% for post in posts %}
+                        <a href="{% url 'post_detail' post.slug %}">post</a>
+                        {% endfor %}
                     </div>
                 </li>
 
                 </div>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About Me</a>
+                    <a class="nav-link" href="#AboutMe">About Me</a>
                 </li>
 
 
             </ul>
             <div class="socials">
-                <ion-icon id="icon1" name="logo-facebook"></ion-icon>
-                <ion-icon id="icon2" name="logo-twitter"></ion-icon>
-                <ion-icon id="icon3" name="logo-instagram"></ion-icon>
+                <a href="#Instagram"><ion-icon id="icon1" name="logo-facebook"></ion-icon></a>
+                <a href="#Tweets"><ion-icon id="icon2" name="logo-twitter"></ion-icon></a>
+                <a href="#Instagram"><ion-icon id="icon3" name="logo-instagram"></ion-icon></a>
             </div>
 
         </div>
@@ -104,18 +97,18 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-xxl-4">
-                <h4 class="heading3"><b>About Me</b>  </h4>
-                <img src="images/Image%203.png" class="img-fluid" style="width: 100%;">
+            <div class="col-sm-4">
+                <a id="AboutMe"> <h4 class="heading3"><b>About Me</b>  </h4></a>
+                <img src="media\download.jfif" class="img-fluid" style="width: 100%;">
                 <p class="p2">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
                 </p>
 
 
 
             </div>
-            <div class="col-xxl-4">
-                <h4 class="heading3"><b>Tweets</b>  </h4>
+            <div class="col-sm-4">
+                <a id="Tweets"><h4 class="heading3"><b>Tweets</b>  </h4></a>
                 <p class="p2">
                     It’s no secret that the digital industry is booming. From exciting startups to global brands,
                     companies are reaching out to digital agencies, responding to the new possibilities available.
@@ -128,8 +121,8 @@
 
 
             </div>
-            <div class="col-xxl-4">
-                <h4 class="heading3"><b>Instagram</b>  </h4>
+            <div class="col-sm-4">
+                <a id="Instagram"><h4 class="heading3"><b>Instagram</b>  </h4></a>
                 <p class="p2">
                     It’s no secret that the digital industry is booming. From exciting startups to global brands,
                     companies are reaching out to digital agencies, responding to the new possibilities available.
@@ -156,7 +149,7 @@
 
 <script src="https://kit.fontawesome.com/6c0b25782c.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-<script src="js/index.js"></script>
+<script src="{% static 'js/index.js' %}"></script>
 
 
 </body>

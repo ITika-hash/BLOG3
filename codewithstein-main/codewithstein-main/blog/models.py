@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms import ModelForm, TextInput, EmailInput
 
 class Post(models.Model):
     title = models.CharField(max_length=255)

@@ -48,7 +48,13 @@ img{
     padding-right: 50px;
 
 }
-
+.subtitle{
+    font-family: 'Bona Nova', serif;
+    font-size: x-small;
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-right: 50px;
+}
 #dropbtn {
     color: white;
     border: none;
@@ -86,12 +92,12 @@ img{
     display: none;
 }
 .p1{
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 .p2{
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1px;
+    padding-right: 1px;
 }
 
 .sharebtns{
