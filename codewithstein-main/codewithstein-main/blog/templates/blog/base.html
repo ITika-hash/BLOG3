@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 {% load static %}
     <head>
         <meta charset="utf-8">
@@ -37,10 +38,10 @@
 
                 <div class="dropdown">
                 <li class="nav-item" id="dropbtn2">
-                    <a class="nav-link" href="#">Posts</a>
+                    <a class="nav-link" href="{% url 'frontpage' %}">Posts</a>
                     <div class="dropdown-content">
                         {% for post in posts %}
-                        <a href="{% url 'post_detail' post.slug %}">post</a>
+                        <a href="{% url 'post_detail' post.slug %}">{{ post.slug }}</a>
                         {% endfor %}
                     </div>
                 </li>
@@ -76,30 +77,70 @@
         </div>
         <div class="col-xxl-10">
             <div>
-            <h1 class="heading"><b>Writing.</b>
-                <button id="openNav" class="btn btn-outline-dark" onclick="openside()"><i class="fa fa-list"></i></button>
-                <button  style="display: none" id="closeNav" class="btn btn-outline-dark" onclick="closeside()"><i class="fa fa-list"></i></button>
-            </h1>
             </div>
+                 </div>
+    </div>
+                <div id="myySidebar" class="sidebar">
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <button class="closebtn" onclick="closeNav()"><i class="fas fa-arrow-left"></i></button>
+
+         <div class="col-sm-4">
+                <a id="About Me"> <h4 class="heading3"><b>About Me</b>  </h4></a>
+
+             <img src="{% static 'media/download.jfif' %}" class="img-fluid" style="width: 100%;">
+
+                <p class="p2">
+                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                </p>
+         </div>
+         <div class="col-sm-4">
+
+                <h4 class="heading3"><b>Social Profiles</b>  </h4>
+                <div class="socials">
+                <a href="#Instagram"><ion-icon id="icon1" name="logo-facebook"></ion-icon></a>
+                <a href="#Tweets"><ion-icon id="icon2" name="logo-twitter"></ion-icon></a>
+                <a href="#Instagram"><ion-icon id="icon3" name="logo-instagram"></ion-icon></a>
+            </div>
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+</footer>
+</div>
+
+                <div id="main2">
+                    <h1 class="heading"><b>Writing.</b>
+
+                <button class="openbtn" onclick="openNav()"><i class="fa fa-list"></i></button>
+
+            </h1>
 
                 {% block content %}
                 {% endblock %}
-            </div>
+
     <div class="col-xxl-1" id="col2">
 
         </div>
-    </div>
-</div>
+
 <div class="container-fluid">
     <hr style="border-color: black">
 
-</div>
+        </div>
+    </div>
+            <div id="main3">
 <footer>
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
                 <a id="AboutMe"> <h4 class="heading3"><b>About Me</b>  </h4></a>
-                <img src="media\download.jfif" class="img-fluid" style="width: 100%;">
+                <img src="{% static 'media/download.jfif' %}" class="img-fluid" style="width: 100%;">
                 <p class="p2">
                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
                 </p>
@@ -139,7 +180,7 @@
 
     </div>
 </footer>
-
+</div>
 </div>
 
 
@@ -151,6 +192,6 @@
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 <script src="{% static 'js/index.js' %}"></script>
 
-
+    </div>
 </body>
 </html>

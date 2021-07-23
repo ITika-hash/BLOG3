@@ -3,6 +3,9 @@
     font-family: 'Bona Nova', serif;
     color: black !important;
 }
+#myySidebar{
+    font-family: 'Bona Nova', serif;
+}
 .nav-link{
     color: black !important;
 }
@@ -16,8 +19,7 @@
     margin-right: 0;
 }
 #closeNav{
-    margin-left: 60%;
-    margin-right: 0;
+
 }
 #icon1{
     margin-right:10px;
@@ -96,8 +98,9 @@ img{
     padding-right: 100px;
 }
 .p2{
-    padding-left: 1px;
-    padding-right: 1px;
+
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .sharebtns{
@@ -182,6 +185,60 @@ body{
 
 
 
+}
+.sidebar {
+height: 100%;
+width: 0;
+position: fixed;
+top: 0;
+right: 0;
+background-color: transparent;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+}
+
+.sidebar div {
+display: inline;
+font-family: 'Bona Nova', serif;
+
+transition: 0.5s;
+cursor: pointer;
+}
+
+.sidebar .closebtn {
+position: absolute;
+top: 60px;
+right: 25px;
+font-size: 20px;
+background-color: transparent;
+border-radius: 20px;
+    font-family: 'Bona Nova', serif;
+    color: lightgray;
+    border: none;
+
+}
+
+.openbtn {
+margin-left: 70%;
+    margin-right: 0;
+    background-color: transparent;
+    color: lightgray;
+    border: none;
+}
+.closbtn {
+margin-left: 70%;
+    margin-right: 0;
+}
+
+#main2 {
+transition: margin-right -.5s;
+}
+#main3 {
+transition: margin-right -.5s;
+}
+#main4 {
+transition: margin-right -.5s;
 }
 
 
