@@ -2,6 +2,7 @@
 <html lang="en">
 
 {% load static %}
+{% load front_tags %}
     <head>
         <meta charset="utf-8">
         <meta charset="UTF-8">
@@ -123,6 +124,7 @@
             </h1>
 
                 {% block content %}
+
                 {% endblock %}
 
     <div class="col-xxl-1" id="col2">
@@ -163,7 +165,7 @@
 
             </div>
             <div class="col-sm-4">
-                <a id="Instagram"><h4 class="heading3"><b>Instagram</b>  </h4></a>
+                <a id="Instagram"><h4 class="heading3"><bpippyt>Instagram</bpippyt>  </h4></a>
                 <p class="p2">
                     It’s no secret that the digital industry is booming. From exciting startups to global brands,
                     companies are reaching out to digital agencies, responding to the new possibilities available.
@@ -191,7 +193,9 @@
 <script src="https://kit.fontawesome.com/6c0b25782c.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 <script src="{% static 'js/index.js' %}"></script>
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+{% front_edit_scripts %}
     </div>
 </body>
 </html>
+{% front_edit_scripts editor="ace" %}
